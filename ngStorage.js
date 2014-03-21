@@ -66,7 +66,7 @@
 
                 _last$storage = angular.copy($storage);
 
-                $rootScope.$watch(function() {
+                $rootScope.$on("routChangeStart", function(event) {
                     _debounce || (_debounce = setTimeout(function() {
                         _debounce = null;
 
